@@ -1,0 +1,5 @@
+Unfinished.
+Todo:
+- Add logic of movement
+- Add logic of capturing + logging
+- Add check + checkmate check per move
