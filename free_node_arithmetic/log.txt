@@ -1,0 +1,12 @@
+Semi-finished...
+Current functionalities:
+- Generating numbers whose size in digits may fill up the RAM if you so wish
+- Adding those numbers together and printing the result in terminal
+
+Current issues + TODO:
+- Numbers must be of same length, this issue is easily fixed and will be soon.
+- Number generation currently exists as digit per digit entry, will add functionality to save as file, and to read from file instead.
+
+Future:
+- Add subtraction, multiplication and division.
+- Add floating point operations.
