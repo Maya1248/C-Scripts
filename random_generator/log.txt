@@ -1,0 +1,2 @@
+10.5.2024.:
+- Given lowest, highest value and the amount of integers, the code will generate a file "list.txt" in which it will put said integers seperated by newline.
