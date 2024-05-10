@@ -13,3 +13,4 @@ It is as fast as it can get, unless better hardware and or threading is provided
 
 10.5.2024.:
 - Instead of printing the sorted lit, it will now be saved to a fresh file "sorted_list.txt"
+- Also the "list.txt" input and "sorted_list.txt" output both should follow the "seperation by newline" format.
