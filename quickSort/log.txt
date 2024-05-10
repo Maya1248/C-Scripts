@@ -8,3 +8,8 @@ Code is written in raw C and is optimized by the GCC.
 It is as fast as it can get, unless better hardware and or threading is provided.
 
 10_000 unsorted integers are bound to be sorted in under 0.06 seconds.
+
+
+
+10.5.2024.:
+- Instead of printing the sorted lit, it will now be saved to a fresh file "sorted_list.txt"
