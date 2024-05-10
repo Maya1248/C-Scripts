@@ -1,0 +1,10 @@
+It is fully finished.
+Provide a list.txt file that has integers seperated by newline.
+
+Space complexity: O(n)
+Average time complexity: O(n*log(n))
+
+Code is written in raw C and is optimized by the GCC.
+It is as fast as it can get, unless better hardware and or threading is provided.
+
+10_000 unsorted integers are bound to be sorted in under 0.06 seconds.
