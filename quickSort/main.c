@@ -43,10 +43,22 @@ int main() {
     clock_t start, end;
     double cpu_time_used;
 
+    /*
+    // count the number of lines
+    int integers = 0;
+    file = fopen("list.txt", "r");
+
+    while (fgets(buffer, BUFFER_SIZE, file) != NULL) {
+        integers++;
+    }
+
+    fclose(file);
+    */
+
     start = clock();
 
-    int length = 10000, counter=0;
-    int unsorted_list[10000];
+    int length = 100000, counter=0;
+    int unsorted_list[100000];
 
     char buffer[BUFFER_SIZE];
     int number;
@@ -69,7 +81,19 @@ int main() {
 
     //print_list(unsorted_list, length);
     quick_sort(unsorted_list, 0, length, length);
-    print_list(unsorted_list, length);   
+    //print_list(unsorted_list, length);   
+
+    fclose(file);
+
+    file = fopen("sorted_list.txt", "w");
+    if (file == NULL) {
+        printf("Failed to create file.");
+        return 1;
+    }
+
+    for (int i=0; i<length; i++) {
+        fprintf(file, "%d\n", unsorted_list[i]); // poor naming, it has been sorted after quick_sort() finished.
+    }
 
     fclose(file);
 
