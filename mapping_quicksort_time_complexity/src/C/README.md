@@ -18,7 +18,7 @@ amount,time\n
 ...
 
 The only actual values you have to provide is "from", "upTo" and "eraseData";
-Given "from" and "upTo", "generate_data" will start a for-loop in which "<amount>,<time>" will
+Given "from" and "upTo", "generate_data" will start a for-loop in which "amount,time" will
 be generated for each value from "from" to "upTo".
 
 - "eraseData", if "y" is provided instead of any other string, "time_complexity.data"
