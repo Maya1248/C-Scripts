@@ -14,7 +14,6 @@ information in "time_complexity.data".
 
 The format of "time_complexity.data" is:
 amount,time
-
 amount,time
 ...
 
