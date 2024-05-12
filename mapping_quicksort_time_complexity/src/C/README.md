@@ -13,7 +13,7 @@ Then, "quickSort" sorts the list, logs the time required to do that and saves th
 information in "time_complexity.data".
 
 The format of "time_complexity.data" is:
-amount,time
+amount,time 
 amount,time
 ...
 
