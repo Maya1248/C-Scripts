@@ -13,8 +13,8 @@ Then, "quickSort" sorts the list, logs the time required to do that and saves th
 information in "time_complexity.data".
 
 The format of "time_complexity.data" is:
-amount,time 
-amount,time
+amount,time\n
+amount,time\n
 ...
 
 The only actual values you have to provide is "from", "upTo" and "eraseData";
