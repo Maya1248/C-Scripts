@@ -38,3 +38,6 @@ The graph shows a curve that is to be expected by a simple quickSort algorithm.
 - "list.txt" is temporary and changes rapidly per each iteration
 - All the files exist as a result of the shell command:
 ./generate_data 1 10000 y
+
+
+- Note: some file errors might corrupt the list.txt, ignore it.
