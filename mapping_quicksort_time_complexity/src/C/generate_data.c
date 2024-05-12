@@ -8,7 +8,7 @@ int main(int argc, char** argv) {
     }
 
     if (strcmp(argv[3], "y") == 0) {
-        printf("[*] Deleting existing data...\n");
+        printf("[*] generate_data/main() - Deleting time_complexity.data ...\n");
         remove_data();
     }
 
@@ -18,8 +18,8 @@ int main(int argc, char** argv) {
 
     for (int i=from+1; i<upTo; i++) {
         checkError = create_data(i);
-        if (checkError == 1) {  // undefined error on opening the list.txt
-            return 0;  // time complexity data remains non-corrupted, re start the program with its corresponding last input.
+        if (checkError != 0) {  // undefined error on opening the list.txt
+            return -1;  // time complexity data remains non-corrupted, re start the program with its corresponding last input.
         }
     }
 

@@ -51,11 +51,10 @@ int create_data(int amount) {
 
     char buffer[BUFFER_SIZE];
     FILE* file = fopen("list.txt", "r");
-    file = fopen("list.txt", "r"); 
 
     if (file == NULL) {
-        printf("Failed to open the file.\n");
-        return 1;
+        printf("[-] quick_sort.h/create_data() - list.txt could not be opened/read.\n");
+        return -1;
     }
     
     while (fgets(buffer, BUFFER_SIZE, file) != NULL) {
@@ -63,11 +62,11 @@ int create_data(int amount) {
             unsorted_list[counter] = number;
             counter++;
         } else {
-            printf("Error: Non-integer character detected.\n");
+            printf("[-] Error: Non-integer character detected.\n");
+            return -2;
         }
     }
     fclose(file);
-
 
 
     start = clock();
@@ -78,6 +77,11 @@ int create_data(int amount) {
     cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
     
     file = fopen("time_complexity.data", "a");
+
+    if (file == NULL) {
+        printf("[-] quick_sort.h/create_data() - time_complexity.data could not be opened.\n");
+        return -1;
+    }
 
     fprintf(file, "%d,%f\n", amount, cpu_time_used);
 
@@ -90,5 +94,6 @@ int remove_data() {
     if (remove("time_complexity.data") == 0) {
         return 0;
     }
-    return 1;
+    printf("[-] quick_sort.h/remove_data() - time_complexity.data could not be deleted.\n");
+    return -1;
 }
