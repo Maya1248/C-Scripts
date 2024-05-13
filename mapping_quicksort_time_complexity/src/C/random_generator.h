@@ -12,7 +12,7 @@ int generate_number(int low, int high) {
 }
 
 int generate_list_file(int low, int high, int amount) {
-    FILE* file = fopen("list.txt", "w");
+    FILE* file = fopen("../tmp/list.txt", "w");
     if (file == NULL) {
         printf("[-] random_generator.h/generate_list_file() - list.txt could not be created/opened.\n");
         return -1;

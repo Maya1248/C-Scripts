@@ -46,11 +46,12 @@ int create_data(int amount) {
     int unsorted_list[amount];
 
 
-    generate_list_file(-10000, 10000, amount);
-
+    if (generate_list_file(-10000, 10000, amount) != 0) {
+        return -1;
+    }
 
     char buffer[BUFFER_SIZE];
-    FILE* file = fopen("list.txt", "r");
+    FILE* file = fopen("../tmp/list.txt", "r");
 
     if (file == NULL) {
         printf("[-] quick_sort.h/create_data() - list.txt could not be opened/read.\n");
@@ -76,7 +77,7 @@ int create_data(int amount) {
     end = clock();
     cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
     
-    file = fopen("time_complexity.data", "a");
+    file = fopen("../data/time_complexity.data", "a");
 
     if (file == NULL) {
         printf("[-] quick_sort.h/create_data() - time_complexity.data could not be opened.\n");
@@ -91,7 +92,7 @@ int create_data(int amount) {
 }
 
 int remove_data() {
-    if (remove("time_complexity.data") == 0) {
+    if (remove("../data/time_complexity.data") == 0) {
         return 0;
     }
     printf("[-] quick_sort.h/remove_data() - time_complexity.data could not be deleted.\n");
