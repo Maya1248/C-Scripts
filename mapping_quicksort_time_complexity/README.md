@@ -11,13 +11,21 @@ If you're on Windows, the name of the file will be "generate_data.exe"
 Feel free to save the shown graph into a png. This will be automatized in the future.
 
 File hierarchy:
+
 /bin - Compiled binaries
+
 /data - Final results, data
+
 /src/C - Source C code
+
 /src/Python - Source Python code
+
 /tmp - Temporary files that change rapidly are stored here
 
+
 /Makefile - For compiling source C code
+
 /README.md - This file.
+
 /LONG_DESCRIPTIONS.md - Poor attempt at explaining the entire project
 
